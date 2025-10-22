@@ -1,7 +1,7 @@
 function otworzOkno(karta) {
     const media = karta.querySelector('img') || karta.querySelector('video');
     const tytul = karta.getAttribute('data-title') || 'Obrazek';
-    const opis = karta.getAttribute('data-desc') || 'Opis obrazka (placeholder) – dodaj swój opis później.';
+    const opis = karta.getAttribute('data-desc') || '';
 
     const okno = document.getElementById('okno');
     const zdjecie = document.getElementById('zdjecie');
@@ -33,7 +33,7 @@ function otworzOkno(karta) {
     }
     
     tytul_okno.textContent = tytul;
-    opis_okno.textContent = opis || 'Opis obrazka (placeholder) – dodaj swój opis później.';
+    opis_okno.textContent = opis || '';
 
     okno.classList.add('aktywne');
     okno.setAttribute('aria-hidden', 'false');
@@ -64,8 +64,15 @@ function otworzModal(czlonek) {
             <div class="naglowek_modalu">
                 <h2 class="tytul_modalu">${czlonek === 'binarylover' ? 'Binarylover' : 'Jurek'}</h2>
                 <p class="bio_modalu">${czlonek === 'binarylover' ? 
-                    'Specjalista od usermode development, Unreal Engine 5, Unity, reverse engineering i exploit development. Ma wieloletnie doświadczenie w tworzeniu cheatów i systemów autoryzacji.' : 
-                    'Ekspert od kernel mode development, reverse engineering, IOCTL, Shared Memory & IPC, UEFI i Hyper-V. Specjalizuje się w niskopoziomowym programowaniu systemowym.'}</p>
+                    'User-Mode Development · Unreal Engine 5 & Unity · Reverse Engineering, Anti-Analysis & Authorization Systems' : 
+                    '• User-mode development for Windows and cross-platform environments<br>•  Unreal Engine 5 and Unity development<br>
+• Reverse engineering and binary analysis (static and dynamic techniques) for security assessment and resilience testing<br>
+• Design and implementation of authorization, licensing, and anti-tamper systems to protect commercial software<br>
+• String protection and obfuscation (runtime encryption/encoding, controlled in-memory representation and sizing to reduce static exposure)<br>
+• Anti-analysis and anti-debug measures (runtime detection and mitigation strategies, integrity checks, tamper-resistant loading)<br>
+• Hashing, integrity verification, to ensure code authenticity and resist tampering with software
+
+ '}</p>
             </div>
             <div class="doswiadczenie_modalu">
                 ${czlonek === 'binarylover' ? 
@@ -106,4 +113,5 @@ document.addEventListener('keydown', function (e) {
             document.body.style.overflow = '';
         }
     }
+
 });
