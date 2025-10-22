@@ -65,14 +65,7 @@ function otworzModal(czlonek) {
                 <h2 class="tytul_modalu">${czlonek === 'binarylover' ? 'Binarylover' : 'Jurek'}</h2>
                 <p class="bio_modalu">${czlonek === 'binarylover' ? 
                     'User-Mode Development · Unreal Engine 5 & Unity · Reverse Engineering, Anti-Analysis & Authorization Systems' : 
-                    '• User-mode development for Windows and cross-platform environments<br>•  Unreal Engine 5 and Unity development<br>
-• Reverse engineering and binary analysis (static and dynamic techniques) for security assessment and resilience testing<br>
-• Design and implementation of authorization, licensing, and anti-tamper systems to protect commercial software<br>
-• String protection and obfuscation (runtime encryption/encoding, controlled in-memory representation and sizing to reduce static exposure)<br>
-• Anti-analysis and anti-debug measures (runtime detection and mitigation strategies, integrity checks, tamper-resistant loading)<br>
-• Hashing, integrity verification, to ensure code authenticity and resist tampering with software
-
- '}</p>
+                    '• User-mode development for Windows and cross-platform environments<br>•  Unreal Engine 5 and Unity development<br>• Reverse engineering and binary analysis (static and dynamic techniques) for security assessment and resilience testing<br>• Design and implementation of authorization, licensing, and anti-tamper systems to protect commercial software<br>• String protection and obfuscation (runtime encryption/encoding, controlled in-memory representation and sizing to reduce static exposure)<br>• Anti-analysis and anti-debug measures (runtime detection and mitigation strategies, integrity checks, tamper-resistant loading)<br>• Hashing, integrity verification, to ensure code authenticity and resist tampering with software'}</p>
             </div>
             <div class="doswiadczenie_modalu">
                 ${czlonek === 'binarylover' ? 
@@ -115,3 +108,4 @@ document.addEventListener('keydown', function (e) {
     }
 
 });
+
